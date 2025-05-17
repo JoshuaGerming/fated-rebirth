@@ -37,6 +37,19 @@ if not os.path.exists(USERS_FILE):
 class User(UserMixin):
     def __init__(self, username):
         self.id = username
+@app.route("/")
+def index():
+    return send_from_directory(FRONTEND, "index.html")
+
+# serve frontend/js files under /js/*
+@app.route("/js/<path:filename>")
+def frontend_js(filename):
+    return send_from_directory(os.path.join(FRONTEND, "js"), filename)
+
+# similarly serve frontend/css
+@app.route("/css/<path:filename>")
+def frontend_css(filename):
+    return send_from_directory(os.path.join(FRONTEND, "css"), filename)
 
 @login_manager.user_loader
 def load_user(username):
