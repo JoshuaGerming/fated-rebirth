@@ -1,0 +1,149 @@
+/* === Global Reset & Body === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #121212;
+  color: white;
+}
+
+/* Toggle classes for Login/Logout */
+#btn-login,
+#btn-logout {
+  display: none;
+}
+body.logged-out  #btn-login  { display: block; }
+body.logged-in   #btn-logout { display: block; }
+
+/* === Container & Panels === */
+.container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.menu {
+  width: 30%;
+  padding: 2rem;
+  background-color: #1f1f1f;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  box-sizing: border-box;
+}
+
+.context-panel {
+  width: 70%;
+  padding: 2rem;
+  background-color: #191919;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+/* === Menu Header & Subtitle === */
+.menu h1 {
+  margin-bottom: 0.5rem;
+  color: #d4af37;
+}
+
+.subtitle {
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: -0.25rem;
+  margin-bottom: 1.5rem;
+}
+
+/* === Buttons in Side Menu === */
+.menu button {
+  width: 100%;               /* full-width in side menu */
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #2a2a2a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  text-align: left;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+.menu button:hover {
+  background-color: #404040;
+}
+
+/* === Index Tables & Content === */
+.index-nav {
+  margin-bottom: 1rem;
+}
+
+.index-nav button {
+  margin: 0.2rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  background-color: #2a2a2a;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.index-nav button:hover {
+  background-color: #404040;
+}
+
+.index-content {
+  margin-top: 1rem;
+}
+
+/* index table styling */
+.index-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+.index-table th,
+.index-table td {
+  border: 1px solid #555;
+  padding: 0.6rem;
+  text-align: left;
+}
+.index-table th {
+  background: #333;
+  color: #fff;
+}
+.index-table tbody tr:nth-child(odd) {
+  background: #222;
+}
+
+/* Boss table slightly different */
+.boss-table th {
+  background: #444;
+}
+.boss-table tbody tr {
+  background: #2a2a1f;
+}
+
+/* Portrait row */
+.combat-portraits {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+.combat-portraits img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  transition: transform 0.1s ease-in-out;
+}
+
+/* Shake animation */
+@keyframes shake {
+  0%   { transform: translateX(0);   }
+  25%  { transform: translateX(-5px); }
+  50%  { transform: translateX(5px);  }
+  75%  { transform: translateX(-5px); }
+  100% { transform: translateX(0);   }
+}
+.shake {
+  animation: shake 0.3s ease-in-out;
+}

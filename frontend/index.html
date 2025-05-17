@@ -3,29 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <title>Fated Rebirth</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="logged-out">
   <div class="container">
-    <!-- Left Side Menu -->
-    <div class="menu">
+    <!-- Side menu -->
+    <aside class="menu side-menu">
       <h1>Fated Rebirth</h1>
       <p class="subtitle">A text adventure</p>
-      <!-- Core Menu Options -->
-      <button onclick="createProfile()">Create Profile</button>
-      <button onclick="loadRun()">Load Profile</button>
-      <button onclick="openIndex()">Index</button>
-      <button onclick="showMenu()">Main Menu</button>
-      <button onclick="openProgressionHub()">Progression Hub</button>
-    </div>
 
-    <!-- Right Side Info Panel -->
-    <div class="context-panel" id="context-panel">
+      <button onclick="startNewRun()">Start New Run</button>
+      <button onclick="createProfile()">Create Profile</button>
+      <button onclick="loadRun()">Load Run</button>
+      <button onclick="openIndex()">Index</button>
+      <button onclick="openProgressionHub()">Progression Hub</button>
+      <button onclick="openShop()">Shop</button>
+      <button onclick="openInventory()">Inventory</button>
+
+      <!-- these two toggle via body.logged-in / logged-out -->
+      <button id="btn-login"  onclick="showAuth()">Login</button>
+      <button id="btn-logout" onclick="exitGame()">Logout</button>
+    </aside>
+
+    <!-- Main content area -->
+    <main class="context-panel" id="context-panel">
       <h2>Welcome to Fated Rebirth</h2>
-      <p>Start by creating or loading a hero profile.</p>
-    </div>
+      <p>Choose an option from the menu to begin your journey.</p>
+    </main>
   </div>
 
-  <script src="script.js"></script>
+  <script type="module" src="js/script.js"></script>
 </body>
 </html>

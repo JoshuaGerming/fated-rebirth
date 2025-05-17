@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+env/
+venv/
+*.env
+
+# Flask / virtualenv
+instance/
+*.sqlite3
+
+# IDE settings
+.vscode/
+.idea/
+
+# Byte‐compiled / logs
+*.log
+
+# Mac / Windows system files
+.DS_Store
+Thumbs.db
+
+# Node / front-end build artifacts (if any)
+node_modules/
+dist/

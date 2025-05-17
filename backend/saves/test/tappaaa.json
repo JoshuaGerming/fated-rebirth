@@ -1,0 +1,20 @@
+{
+  "name": "tappaaa",
+  "heroClass": "Warrior",
+  "stats": {
+    "hp": 100,
+    "str": 15,
+    "dex": 8,
+    "int": 5,
+    "luck": 5
+  },
+  "gold": 250,
+  "essence": 10,
+  "potions": 3,
+  "inventory": [],
+  "equipped": {
+    "accessory": null,
+    "armor": null,
+    "weapon": null
+  }
+}
